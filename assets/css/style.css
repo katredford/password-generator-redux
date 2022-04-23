@@ -1,0 +1,38 @@
+.password-display {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 520px;
+    border-style: dotted;
+    border-color: blueviolet;
+    height: 200px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.password-box {
+    text-align: center;
+    border-style: solid;
+    width: 361px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+}
+
+button {
+    margin: 12px 40px 83px 164px;
+    background-color: bisque;
+    border-style: dotted;
+    border-color: aquamarine;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+button:hover {
+    background-color: rgb(91, 29, 199);
+    color: white;
+}
