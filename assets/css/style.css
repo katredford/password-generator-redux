@@ -1,11 +1,20 @@
+body {
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    background-color: #432f41;
+    color: blanchedalmond;
+}
+
+
 .password-display {
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    width: 520px;
+    width: 700px;
     border-style: dotted;
     border-color: blueviolet;
-    height: 200px;
+    height: 350px;
+    border-radius: 25px;
 }
 
 h1 {
@@ -13,17 +22,29 @@ h1 {
 }
 
 .password-box {
+text-align: center;
+border-style: solid;
+width: 505px;
+height: 84px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 68px;
+border-radius: 15px;
+}
+
+.password-options{
     text-align: center;
-    border-style: solid;
-    width: 361px;
+    width: 538px;
     height: 50px;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 15px;
-}
+    margin-top: 19px;
+    }
+   
+
 
 button {
-    margin: 12px 40px 83px 164px;
+    margin: 12px 40px 83px 250px;
     background-color: bisque;
     border-style: dotted;
     border-color: aquamarine;
