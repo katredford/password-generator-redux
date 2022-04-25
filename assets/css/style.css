@@ -24,11 +24,11 @@ h1 {
 .password-box textarea {
     width: 500px;
     height: 78px;
-    border-style: solid;
+    /* border-style: solid; */
+    border-color: blanchedalmond;
     border-radius: 11px;
     color: rgb(138, 59, 103);
     text-align: center;
-    font-size: 24;
     font-size: 21px;
     background: rgb(169, 235, 242);
 }
