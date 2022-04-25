@@ -21,26 +21,38 @@ h1 {
     text-align: center;
 }
 
-.pass-box {
-text-align: center;
-border-style: solid;
-width: 505px;
-height: 84px;
-margin-left: auto;
-margin-right: auto;
-margin-top: 68px;
-border-radius: 15px;
+.password-box textarea {
+    width: 500px;
+    height: 78px;
+    border-style: solid;
+    border-radius: 11px;
+    color: rgb(138, 59, 103);
+    text-align: center;
+    font-size: 24;
+    font-size: 21px;
+    background: rgb(169, 235, 242);
 }
 
-.password-options{
+.password-box {
+    text-align: center;
+    border-style: solid;
+    width: 505px;
+    height: 84px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 68px;
+    border-radius: 15px;
+}
+
+.password-options {
     text-align: center;
     width: 538px;
     height: 50px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 19px;
-    }
-   
+}
+
 
 
 button {
