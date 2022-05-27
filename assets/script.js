@@ -66,11 +66,11 @@ const specialCheck = document.querySelector('#specialCharacters');
         }
 
         const passwordOptions = {
-            passlength: passlength,
-            up: up,
-            low: low,
-            num: num,
-            speChar: speChar
+            passOpt: passlength,
+            upperOpt: up,
+            lowOpt: low,
+            numOpt: num,
+            specOpt: speChar
 
         };
         console.log(passwordOptions, 'in the console?????');
@@ -95,53 +95,53 @@ function createPassword() {
 
     var finalPass = [];
 
-    var charactersPossible = [];
+    var chatArray = []; //place for possible characters 
 
-    var charactersGuaranteed = [];
+    var charWinner = []; //guaranteed characters, at least one from each array option chosen
 
     if (!passOptions) return null;
 
-    if (passOptions.up) {
-        charactersPossible = charactersPossible.concat(uppercase);
-        charactersGuaranteed.push(randomChars(uppercase));
+    if (passOptions.upperOpt) {
+        chatArray = chatArray.concat(uppercase);
+        charWinner.push(randomChars(uppercase));
         
-        console.log(charactersGuaranteed, "uppercase guaranteed")
+        console.log(charWinner, "uppercase guaranteed")
     }
 
-     if (passOptions.low) {
-        charactersPossible = charactersPossible.concat(lowercase);
-         charactersGuaranteed.push(randomChars(lowercase));
+     if (passOptions.lowOpt) {
+        chatArray = chatArray.concat(lowercase);
+         charWinner.push(randomChars(lowercase));
          
-         console.log(charactersGuaranteed, "lowercase guaranteed")
+         console.log(charWinner, "lowercase guaranteed")
      }
     
-      if (passOptions.num) {
-        charactersPossible = charactersPossible.concat(numbers);
-          charactersGuaranteed.push(randomChars(numbers));
+      if (passOptions.numOpt) {
+        chatArray = chatArray.concat(numbers);
+          charWinner.push(randomChars(numbers));
           
-          console.log(charactersGuaranteed, "numbers guaranteed")
+          console.log(charWinner, "numbers guaranteed")
       }
     
-      if (passOptions.speChar) {
-        charactersPossible = charactersPossible.concat(special);
-          charactersGuaranteed.push(randomChars(special));
+      if (passOptions.specOpt) {
+        chatArray = chatArray.concat(special);
+          charWinner.push(randomChars(special));
           
-          console.log(charactersGuaranteed, "special guaranteed")
-          console.log(charactersPossible, "characters possible")
+          console.log(charWinner, "special guaranteed")
+          console.log(chatArray, "characters possible")
       }
     
-    console.log(charactersGuaranteed, "characters guaranteed again")
-    for (var i = 0; i < passOptions.passlength; i++){
-       var characterPossible = randomChars(charactersPossible);
+    console.log(charWinner, "characters guaranteed again")
+    for (var i = 0; i < passOptions.passOpt; i++){
+       var characterPossible = randomChars(chatArray);
 
-         console.log(characterPossible, 'possinle chars loop')
+         console.log(characterPossible, 'possible chars loop')
         finalPass.push(characterPossible);
 
           console.log(finalPass, "final password characters possible")
     }
     
-    for (var i = 0; i < charactersGuaranteed.length; i++){
-        finalPass[i] = charactersGuaranteed[i];
+    for (var i = 0; i < charWinner.length; i++){
+        finalPass[i] = charWinner[i];
 
     }
 
