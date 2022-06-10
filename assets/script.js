@@ -15,18 +15,24 @@ const specialCheck = document.querySelector('#specialCharacters');
 
     function getpasswordOptions() {
          var passlength = parseInt(charNumInput.value);
-
-        if (Number.isNaN(passlength)) {
+        // console.log(passlength)
+         if (Number.isNaN(passlength)) {
             alert('Password length must be provided as a number');
+           charNumInput.value = "";
             return null;
         }
-        // console.log(passlength)
+        
         if (passlength >= 8 && passlength <= 128) {
             passlength = parseInt(charNumInput.value);
             console.log(passlength);
         } else {
             alert('Password length must be between 8 and 128 characters, please try again')
+            charNumInput.value = "";
+            return null;
         }
+
+       
+       
 
         // console.log(upperCheck.checked === true);
         if (
@@ -36,7 +42,7 @@ const specialCheck = document.querySelector('#specialCharacters');
             specialCheck.checked === false
         ) {
             alert('Must select at least one character type, please try again')
-             return getpasswordOptions();
+            return null;
         }
 
         if (upperCheck.checked) {
@@ -153,9 +159,11 @@ function createPassword() {
 var buttonClick = document.querySelector('#generate');
 
 function passwordCreation() {
+   event.preventDefault();
+    
     var password = createPassword();
     var passwordText = document.querySelector('#password');
-
+    
     passwordText.value = password;
 }
 
